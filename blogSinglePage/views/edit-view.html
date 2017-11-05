@@ -1,0 +1,33 @@
+<div class="row"   ng-init="editedBlog.loadExistingBlog()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <br/>
+                <h1>Edit the blog post</h1>
+                <div class="post-preview">
+                   <form ng-submit="editedBlog.editPost()">
+                       
+                       <input placeholder="Heading of Blog" type="text" name="heading" ng-model="editedBlog.heading" value="{{editedBlog.oldBlog.heading}}"required=""><br/><br/>
+                       <input placeholder="Sub Heading of Blog" type="text" name="subHeading" ng-model="editedBlog.subHeading" value="{{editedBlog.oldBlog.subHeading}}" required=""><br/><br/>
+                       <input placeholder="Author" type="text" name="author" ng-model="editedBlog.author" value="{{editedBlog.oldBlog.author}}" required=""><br/><br/>
+                      
+                       <textarea rows="4" cols="50" ng-model="editedBlog.bodyHtml" value="{{editedBlog.oldBlog.bodyHtml}}"required="">
+                            
+                       </textarea>
+                       <br/><br/>
+                       <input type="submit" value="Save">
+
+
+
+                   </form>
+                </div>
+                <hr>
+                
+              
+             
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>
