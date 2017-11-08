@@ -154,7 +154,7 @@ myApp.controller('blogCreateController',['$http',function($http) {
           // when the response is available
           //console.log(response);
           alert("blog created successfully");
-          window.location = 'post.html?blogId='+response.data.data.blogId;
+          window.location = 'index.html#/blog/' + response.data.data.blogId;
           
 
         }, function errorCallback(response) {
@@ -195,7 +195,12 @@ myApp.controller('editBlogController',['$http','$routeParams',function($http,$ro
           // when the response is available
           //console.log(response);
           main.oldBlog = response.data.data;
-          console.log(main.oldBlog);
+          console.log('get response from edit',main.oldBlog);
+
+          main.heading = main.oldBlog.heading ;
+          main.subHeading = main.oldBlog.subHeading ;
+          main.bodyHtml = main.oldBlog.bodyHtml ;
+          main.author = main.oldBlog.author ;
 
          // main.pageHeading = main.blog.heading;
           //main.pageSubHeading = main.blog.subHeading;
@@ -230,14 +235,15 @@ myApp.controller('editBlogController',['$http','$routeParams',function($http,$ro
 
         method: 'PUT',
         data  : myData,
-        url: main.baseUrl+'/'+'main.blogId'+'/edit' 
+        url: main.baseUrl+'/'+main.blogId+'/edit' 
         
       }).then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
           alert("blog edited successfully");
-          window.location = 'post.html?blogId='+response.data.data.blogId;
+          window.location = 'index.html#/blog/' + response.data.data.blogId;
+          //window.location = 'post.html?blogId='+response.data.data.blogId;
           
 
         }, function errorCallback(response) {
