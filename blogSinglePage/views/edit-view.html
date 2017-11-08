@@ -5,11 +5,11 @@
                 <div class="post-preview">
                    <form ng-submit="editedBlog.editPost()">
                        
-                       <input placeholder="Heading of Blog" type="text" name="heading" ng-model="editedBlog.heading" value="{{editedBlog.oldBlog.heading}}"required=""><br/><br/>
-                       <input placeholder="Sub Heading of Blog" type="text" name="subHeading" ng-model="editedBlog.subHeading" value="{{editedBlog.oldBlog.subHeading}}" required=""><br/><br/>
-                       <input placeholder="Author" type="text" name="author" ng-model="editedBlog.author" value="{{editedBlog.oldBlog.author}}" required=""><br/><br/>
+                       <input placeholder="Heading of Blog" type="text" name="heading" ng-model="editedBlog.heading" required=""><br/><br/>
+                       <input placeholder="Sub Heading of Blog" type="text" name="subHeading" ng-model="editedBlog.subHeading"  required=""><br/><br/>
+                       <input placeholder="Author" type="text" name="author" ng-model="editedBlog.author"  required=""><br/><br/>
                       
-                       <textarea rows="4" cols="50" ng-model="editedBlog.bodyHtml" value="{{editedBlog.oldBlog.bodyHtml}}"required="">
+                       <textarea rows="4" cols="50" ng-model="editedBlog.bodyHtml" required="">
                             
                        </textarea>
                        <br/><br/>
